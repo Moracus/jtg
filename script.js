@@ -2,6 +2,10 @@ const video = document.getElementById("custom-video");
 const playIcon = document.getElementById("play-icon");
 const items = document.querySelectorAll(".carousel-item");
 const dots = document.querySelectorAll(".dot");
+const contactForm = document.getElementById("contactForm");
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const body = document.body;
 
 let currIndex = 0;
 let interval;
@@ -55,3 +59,23 @@ dots.forEach((dot) => {
 function startCarousel() {
   interval = setInterval(nextSlide, 5000);
 }
+startCarousel();
+// Show modal on form submit
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault(); // Prevent form submission
+  modal.style.display = "flex"; // Show modal
+  body.classList.add("no-scroll");
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+  body.classList.remove("no-scroll"); // Enable scrolling
+});
+
+// Close modal on clicking outside of the modal content
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    body.classList.remove("no-scroll");
+  }
+});

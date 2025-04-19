@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -16,11 +16,11 @@
     <section class="hero" role="banner" aria-label="hero-section">
       <nav class="navbar" role="navigation" aria-label="navigation-bar">
         <ul class="menu">
-          <li>Home</li>
-          <li>Product</li>
-          <li>Pricing</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="#features">Product</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a>About</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
         <img src="./assets/logo.png" class="logo" />
 
@@ -34,18 +34,23 @@
         <div class="hero-text">
           <h1 class="hero-title">The best products start with Figma</h1>
           <h4 class="hero-subtitle">
-            Most calendars are designed for teams. Slate is designed for
-            freelancers
+            <p>Most calendars are designed for teams.</p>
+            <p>Slate is designed for freelancers</p>
           </h4>
         </div>
         <button class="hero-cta" aria-label="Try button">Try For Free</button>
       </div>
       <!-- <div id="padding-bottom"></div> -->
     </section>
-    <section class="features" role="presentation" aria-label="features">
-      <div class="feature-heading">
-        <h2>Features</h2>
-        <h4>
+    <section
+      class="features"
+      role="presentation"
+      aria-label="features"
+      id="features"
+    >
+      <div class="section-heading">
+        <h2 class="section-heading-title">Features</h2>
+        <h4 class="section-heading-subtitle">
           <p>Most calendars are designed for teams.</p>
           <p>Slate is designed for freelancers</p>
         </h4>
@@ -102,7 +107,7 @@
       <div class="newsletter-img">
         <img src="./assets/undraw_newsletter_vovu.png" />
       </div>
-      <div class="newsletter-email">
+      <div class="newsletter-email" id="newsletter-email">
         <div>
           <h3>At your fingertips</h3>
           <h2>Lightning fast prototyping</h2>
@@ -120,9 +125,9 @@
       </div>
     </section>
     <section class="partners">
-      <div aria-label="Partners heading">
-        <h2>Partners</h2>
-        <h4>
+      <div aria-label="Partners heading" class="section-heading">
+        <h2 class="section-heading-title">Partners</h2>
+        <h4 class="section-heading-subtitle">
           <p>Most calendars are designed for teams.</p>
           <p>Slate is designed for freelancers</p>
         </h4>
@@ -231,10 +236,10 @@
         <span class="dot" data-index="2"></span>
       </div>
     </section>
-    <section class="pricing">
-      <div class="pricing-heading">
-        <h2>Pricing</h2>
-        <h4>
+    <section class="pricing" id="pricing">
+      <div class="pricing-heading section-heading">
+        <h2 class="section-heading-title">Pricing</h2>
+        <h4 class="section-heading-subtitle">
           <p>Most calendars are designed for teams.</p>
           <p>Slate is designed for freelancers</p>
         </h4>
@@ -263,19 +268,19 @@
           </div>
           <button class="hero-cta" aria-label="Try button">Order Now</button>
         </div>
-        <div class="pricing-card-1">
-          <div class="pricing-card-heading">
+        <div class="pricing-card-1" id="pricing-contrast">
+          <div class="pricing-card-heading contrast">
             <h3>FREE</h3>
             <h6>Organize across all apps by hand</h6>
           </div>
-          <div class="amount">
+          <div class="amount contrast">
             <h1>0</h1>
-            <div class="amount-block">
+            <div class="amount-block contrast">
               <h3>$</h3>
               <h6>per month</h6>
             </div>
           </div>
-          <div class="pricing-feature">
+          <div class="pricing-feature contrast">
             <ul>
               <li>pricing feature</li>
               <li>pricing feature</li>
@@ -311,6 +316,138 @@
         </div>
       </div>
     </section>
+    <section class="contact" id="contact">
+      <div aria-label="contact heading" class="section-heading">
+        <h2 class="section-heading-title">Contact Us</h2>
+        <h4 class="section-heading-subtitle">
+          <p>Most calendars are designed for teams.</p>
+          <p>Slate is designed for freelancers</p>
+        </h4>
+      </div>
+      <div class="sign-up">
+        <div class="contact-container">
+          <form id="contactForm" class="contact-form">
+            <h3>Contact Us</h3>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              rows="10"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" class="send-button">Send</button>
+          </form>
+        </div>
+        <div class="map-container">
+          <div class="address">
+            <div>
+              <img src="./assets/bx_bx-map.png" />
+              <h6>
+                <p>6386 Spring St undefined Anchorage,</p>
+                <p>Georgia 12473 United States</p>
+              </h6>
+            </div>
+            <div>
+              <img src="./assets/ic_baseline-phone-android.png" />
+              <h6>(843) 555-0130</h6>
+            </div>
+            <div>
+              <img src="./assets/ant-design_mail-outlined.png" />
+              <h6>willie.jennings@example.com</h6>
+            </div>
+          </div>
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15283668.820206458!2d72.09954009527536!3d20.73601700500765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1745070601612!5m2!1sen!2sin"
+              width="516"
+              height="323"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="conatact-socials">
+            <ul class="socials">
+              <li><img src="./assets/ant-design_twitter-outlined.png" /></li>
+              <li><img src="./assets/ant-design_facebook-filled.png" /></li>
+              <li><img src="./assets/ant-design_linkedin-filled.png" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <p>Your query sent successfully!</p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Pages</h3>
+          <ul>
+            <li>Home</li>
+            <li>Features</li>
+            <li>Partners</li>
+            <li>Pricing</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Tomothy</h3>
+          <ul>
+            <li>Eleanor Edwards</li>
+            <li>Ted Robertson</li>
+            <li>Annette Russell</li>
+            <li>Jennie McKinney</li>
+            <li>Gloria Richards</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Jane Black</h3>
+          <ul>
+            <li>Philip Jones</li>
+            <li>Product</li>
+            <li>Colleen Russell</li>
+            <li>Marvin Hawkins</li>
+            <li>Bruce Simmons</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p>
+          <img src="./assets/bx_bx-map (1).png" alt="location" /> 7480 Mistwood
+          Hollo
+        </p>
+        <p>
+          <img src="./assets/ic_baseline-phone-android (1).png" alt="phone" />
+          (239) 555-0108
+        </p>
+        <div class="social-icons">
+          <img src="./assets/twitter.png" alt="Twitter" />
+          <img src="./assets/fb.png" alt="Facebook" />
+          <img src="./assets/linkedin.png" alt="LinkedIn" />
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

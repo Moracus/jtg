@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="hero" role="banner" aria-label="hero-section">
+      <nav class="navbar" role="navigation" aria-label="navigation-bar">
+        <ul class="menu">
+          <li>Home</li>
+          <li>Product</li>
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+        <img src="./assets/logo.png" class="logo" />
+
+        <ul class="socials">
+          <li><img src="./assets/twitter.png" /></li>
+          <li><img src="./assets/fb.png" /></li>
+          <li><img src="./assets/linkedin.png" /></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">The best products start with Figma</h1>
+          <h4 class="hero-subtitle">
+            Most calendars are designed for teams. Slate is designed for
+            freelancers
+          </h4>
+        </div>
+        <button class="hero-cta" aria-label="Try button">Try For Free</button>
+      </div>
+      <!-- <div id="padding-bottom"></div> -->
+    </section>
+    <section class="features" role="presentation" aria-label="features">
+      <div class="feature-heading">
+        <h2>Features</h2>
+        <h4>
+          <p>Most calendars are designed for teams.</p>
+          <p>Slate is designed for freelancers</p>
+        </h4>
+      </div>
+      <div class="feature-items">
+        <div class="item">
+          <img src="./assets/mdi_drawing.png" />
+          <h3>OpenType features Variable fonts</h3>
+          <p>
+            Slate helps you see how many more days you need to work to reach
+            your financial goal.
+          </p>
+        </div>
+        <div>
+          <img src="./assets/mdi_drawdraw.png" />
+          <h3>Design with real data</h3>
+          <p>
+            Slate helps you see how many more days you need to work to reach
+            your financial goal.
+          </p>
+        </div>
+        <div>
+          <img src="./assets/mdi_brush.png" />
+          <h3>Fastest way to take action</h3>
+          <p>
+            Slate helps you see how many more days you need to work to reach
+            your financial goal.
+          </p>
+        </div>
+      </div>
+      <div class="video-container" onclick="togglePlayPause()">
+        <video id="custom-video" src="./assets/tiny.mp4" autoplay></video>
+        <div id="play-icon" class="play-icon">
+          <img src="./assets/play button.png" />
+        </div>
+      </div>
+    </section>
+    <section class="feature-extended">
+      <div class="about-feature">
+        <div class="about-feature-text">
+          <h2>Fastest way to organize</h2>
+          <h4>
+            <p>Most calendars are designed for teams.</p>
+            <p>Slate is designed for freelancers</p>
+          </h4>
+        </div>
+        <button class="hero-cta" aria-label="Try button">Try For Free</button>
+      </div>
+      <div class="feature-macbook">
+        <img src="./assets/@ Macbook Pro.png" alt="" />
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="newsletter-img">
+        <img src="./assets/undraw_newsletter_vovu.png" />
+      </div>
+      <div class="newsletter-email">
+        <div>
+          <h3>At your fingertips</h3>
+          <h2>Lightning fast prototyping</h2>
+        </div>
+        <div>
+          <div>
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Available exclusivery on Figmaland</p>
+          </div>
+          <div class="input-container">
+            <input type="email" placeholder="Your Email" class="email-input" />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+      <div aria-label="Partners heading">
+        <h2>Partners</h2>
+        <h4>
+          <p>Most calendars are designed for teams.</p>
+          <p>Slate is designed for freelancers</p>
+        </h4>
+      </div>
+      <div class="client-grid">
+        <div class="client-card">
+          <p>Client Name</p>
+          <img src="./assets/logos_google.png" alt="Google" />
+        </div>
+        <div class="client-card">
+          <p>Client Name</p>
+          <img src="./assets/amazon.png" alt="Amazon" />
+        </div>
+        <div class="client-card">
+          <p>Client Name</p>
+          <img src="./assets/Rectanglemicrosoft.png" alt="Microsoft" />
+        </div>
+        <div class="client-card">
+          <p>Client Name</p>
+          <img src="./assets/Rectangleuber.png" alt="Uber" />
+        </div>
+        <div class="client-card">
+          <p>Client Name</p>
+          <img src="./assets/Rectangledropbox.png" alt="Dropbox" />
+        </div>
+        <div class="client-card">
+          <p>Client Name</p>
+          <img src="./assets/logos_google.png" alt="Google" />
+        </div>
+        <div class="client-card">
+          <p>Client Name</p>
+          <img src="./assets/Rectangleuber.png" alt="Uber" />
+        </div>
+        <div class="client-card">
+          <p>Client Name</p>
+          <img src="./assets/amazon.png" alt="Amazon" />
+        </div>
+      </div>
+      <button class="hero-cta" aria-label="Try button">Try For Free</button>
+    </section>
+    <section class="testimonial-section">
+      <h2>Testimonials</h2>
+      <div class="carousel">
+        <div class="carousel-item active">
+          <img src="./assets/logos_ibm.png" alt="IBM" class="company-logo" />
+          <h4 class="testimonial-text">
+            Most calendars are designed for teams. Slate is designed for
+            freelancers who want a simple way to plan their schedule.
+          </h4>
+          <div class="testimonial-author">
+            <img
+              src="./assets/Ellipse 2avatar.png"
+              alt="John Doe"
+              class="author-photo"
+            />
+            <div>
+              <h6 class="author-name">John Doe</h6>
+              <p class="author-title">UI Designer</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./assets/logos_google.png"
+            alt="Google"
+            class="company-logo"
+          />
+          <h4 class="testimonial-text">
+            Slate makes managing your freelance work a breeze. Intuitive and
+            efficient, it's a must-have tool for independent professionals.
+          </h4>
+          <div class="testimonial-author">
+            <img
+              src="./assets/Ellipse 2avatar.png"
+              alt="Jane Smith"
+              class="author-photo"
+            />
+            <div>
+              <h6 class="author-name">Jane Smith</h6>
+              <p class="author-title">Product Manager</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/amazon.png" alt="Amazon" class="company-logo" />
+          <h4 class="testimonial-text">
+            With Slate, I finally have a clear way to organize my daily
+            workflow. It's been a game-changer for my productivity.
+          </h4>
+          <div class="testimonial-author">
+            <img
+              src="./assets/Ellipse 2avatar.png"
+              alt="Alice Johnson"
+              class="author-photo"
+            />
+            <div>
+              <h6 class="author-name">Alice Johnson</h6>
+              <p class="author-title">UX Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </section>
+    <section class="pricing">
+      <div class="pricing-heading">
+        <h2>Pricing</h2>
+        <h4>
+          <p>Most calendars are designed for teams.</p>
+          <p>Slate is designed for freelancers</p>
+        </h4>
+      </div>
+      <div class="pricing-items">
+        <div class="pricing-card-1">
+          <div class="pricing-card-heading">
+            <h3>FREE</h3>
+            <h6>Organize across all apps by hand</h6>
+          </div>
+          <div class="amount">
+            <h1>0</h1>
+            <div class="amount-block">
+              <h3>$</h3>
+              <h6>per month</h6>
+            </div>
+          </div>
+          <div class="pricing-feature">
+            <ul>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+            </ul>
+          </div>
+          <button class="hero-cta" aria-label="Try button">Order Now</button>
+        </div>
+        <div class="pricing-card-1">
+          <div class="pricing-card-heading">
+            <h3>FREE</h3>
+            <h6>Organize across all apps by hand</h6>
+          </div>
+          <div class="amount">
+            <h1>0</h1>
+            <div class="amount-block">
+              <h3>$</h3>
+              <h6>per month</h6>
+            </div>
+          </div>
+          <div class="pricing-feature">
+            <ul>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+            </ul>
+          </div>
+          <button class="hero-cta" aria-label="Try button">Order Now</button>
+        </div>
+        <div class="pricing-card-1">
+          <div class="pricing-card-heading">
+            <h3>FREE</h3>
+            <h6>Organize across all apps by hand</h6>
+          </div>
+          <div class="amount">
+            <h1>0</h1>
+            <div class="amount-block">
+              <h3>$</h3>
+              <h6>per month</h6>
+            </div>
+          </div>
+          <div class="pricing-feature">
+            <ul>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+              <li>pricing feature</li>
+            </ul>
+          </div>
+          <button class="hero-cta" aria-label="Try button">Order Now</button>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

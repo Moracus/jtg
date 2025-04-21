@@ -1,7 +1,6 @@
 const video = document.getElementById("custom-video");
 const playIcon = document.getElementById("play-icon");
-const items = document.querySelectorAll(".carousel-item");
-const dots = document.querySelectorAll(".dot");
+
 const contactForm = document.getElementById("contactForm");
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeModal");
@@ -9,6 +8,59 @@ const body = document.body;
 
 let currIndex = 0;
 let interval;
+
+const carouselInner = document.querySelector(".carousel-inner");
+const testimonials = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".crousal-btn");
+let currentIndex = 0;
+const totalTestimonials = testimonials.length;
+let autoSlideInterval;
+
+// Function to update carousel position
+function updateCarousel() {
+  carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  // Update active states
+  testimonials.forEach((testimonial, index) => {
+    testimonial.classList.toggle("selected", index === currentIndex);
+  });
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("selected", index === currentIndex);
+  });
+}
+
+// Function to go to a specific testimonial
+function goToTestimonial(index) {
+  currentIndex = index;
+  if (currentIndex >= totalTestimonials) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = totalTestimonials - 1;
+  }
+  updateCarousel();
+}
+
+// Auto-slide every 5 seconds
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    goToTestimonial(currentIndex + 1);
+  }, 5000);
+}
+
+// Stop auto-slide (e.g., when user interacts)
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// Event listeners for dots
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    stopAutoSlide();
+    goToTestimonial(index);
+    startAutoSlide(); // Restart auto-slide after manual interaction
+  });
+});
+
 function togglePlayPause() {
   if (video.paused || video.ended) {
     video.play();
@@ -28,38 +80,6 @@ video.addEventListener("pause", () => {
 video.addEventListener("play", () => {
   playIcon.style.display = "none";
 });
-
-function showSlide(index) {
-  items.forEach((item, i) => {
-    item.classList.toggle("active", i === index);
-  });
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index);
-  });
-}
-
-function nextSlide() {
-  currIndex = (currIndex + 1) % items.length;
-  showSlide(currIndex);
-}
-
-function setSlide(index) {
-  currIndex = index;
-  showSlide(index);
-}
-
-dots.forEach((dot) => {
-  dot.addEventListener("click", () => {
-    clearInterval(interval);
-    setSlide(Number(dot.dataset.index));
-    startCarousel();
-  });
-});
-
-function startCarousel() {
-  interval = setInterval(nextSlide, 5000);
-}
-startCarousel();
 // Show modal on form submit
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevent form submission
@@ -78,4 +98,9 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
     body.classList.remove("no-scroll");
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateCarousel();
+  startAutoSlide();
 });

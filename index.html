@@ -13,29 +13,47 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="hero" role="banner" aria-label="hero-section">
-      <nav class="navbar" role="navigation" aria-label="navigation-bar">
-        <ul class="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="#features">Product</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a>About</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-        <img src="./assets/logo.png" class="logo" />
+    <nav class="navbar">
+      <div class="nav-group nav-left">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Product</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
 
-        <ul class="socials">
-          <li><img src="./assets/twitter.png" /></li>
-          <li><img src="./assets/fb.png" /></li>
-          <li><img src="./assets/linkedin.png" /></li>
-        </ul>
-      </nav>
+      <div class="nav-center">
+        <img src="assets/logo.png" alt="Logo" class="nav-logo" />
+      </div>
+
+      <div class="nav-group nav-right">
+        <a href="#"
+          ><img
+            src="assets/ant-design_twitter-outlined (1).png"
+            alt="Twitter"
+            class="nav-icon"
+        /></a>
+        <a href="#"
+          ><img
+            src="assets/ant-design_facebook-filled (1).png"
+            alt="Facebook"
+            class="nav-icon"
+        /></a>
+        <a href="#"
+          ><img
+            src="assets/ant-design_linkedin-filled (1).png"
+            alt="LinkedIn"
+            class="nav-icon"
+        /></a>
+      </div>
+    </nav>
+    <section class="hero" role="banner" aria-label="hero-section">
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="hero-title">The best products start with Figma</h1>
           <h4 class="hero-subtitle">
-            <p>Most calendars are designed for teams.</p>
-            <p>Slate is designed for freelancers</p>
+            <p>Most calendars are designed for teams. Slate is designed</p>
+            <p>for freelancers</p>
           </h4>
         </div>
         <button class="hero-cta" aria-label="Try button">Try For Free</button>
@@ -64,7 +82,7 @@
             your financial goal.
           </p>
         </div>
-        <div>
+        <div class="item">
           <img src="./assets/mdi_drawdraw.png" />
           <h3>Design with real data</h3>
           <p>
@@ -72,9 +90,12 @@
             your financial goal.
           </p>
         </div>
-        <div>
+        <div class="item">
           <img src="./assets/mdi_brush.png" />
-          <h3>Fastest way to take action</h3>
+          <h3>
+            <p>Fastest way to</p>
+            <p>take action</p>
+          </h3>
           <p>
             Slate helps you see how many more days you need to work to reach
             your financial goal.
@@ -91,7 +112,10 @@
     <section class="feature-extended">
       <div class="about-feature">
         <div class="about-feature-text">
-          <h2>Fastest way to organize</h2>
+          <h2>
+            <p>Fastest way to</p>
+            <p>organize</p>
+          </h2>
           <h4>
             <p>Most calendars are designed for teams.</p>
             <p>Slate is designed for freelancers</p>
@@ -124,116 +148,125 @@
         </div>
       </div>
     </section>
-    <section class="partners">
-      <div aria-label="Partners heading" class="section-heading">
-        <h2 class="section-heading-title">Partners</h2>
-        <h4 class="section-heading-subtitle">
-          <p>Most calendars are designed for teams.</p>
-          <p>Slate is designed for freelancers</p>
-        </h4>
-      </div>
-      <div class="client-grid">
-        <div class="client-card">
-          <p>Client Name</p>
-          <img src="./assets/logos_google.png" alt="Google" />
-        </div>
-        <div class="client-card">
-          <p>Client Name</p>
-          <img src="./assets/amazon.png" alt="Amazon" />
-        </div>
-        <div class="client-card">
-          <p>Client Name</p>
-          <img src="./assets/Rectanglemicrosoft.png" alt="Microsoft" />
-        </div>
-        <div class="client-card">
-          <p>Client Name</p>
-          <img src="./assets/Rectangleuber.png" alt="Uber" />
-        </div>
-        <div class="client-card">
-          <p>Client Name</p>
-          <img src="./assets/Rectangledropbox.png" alt="Dropbox" />
-        </div>
-        <div class="client-card">
-          <p>Client Name</p>
-          <img src="./assets/logos_google.png" alt="Google" />
-        </div>
-        <div class="client-card">
-          <p>Client Name</p>
-          <img src="./assets/Rectangleuber.png" alt="Uber" />
-        </div>
-        <div class="client-card">
-          <p>Client Name</p>
-          <img src="./assets/amazon.png" alt="Amazon" />
-        </div>
-      </div>
-      <button class="hero-cta" aria-label="Try button">Try For Free</button>
-    </section>
-    <section class="testimonial-section">
-      <h2>Testimonials</h2>
-      <div class="carousel">
-        <div class="carousel-item active">
-          <img src="./assets/logos_ibm.png" alt="IBM" class="company-logo" />
-          <h4 class="testimonial-text">
+    <section id="partners" class="partners">
+      <div class="flex-column content">
+        <div class="flex-column text">
+          <h3 style="height: 33px"></h3>
+          <h2>Partners</h2>
+          <h4>
             Most calendars are designed for teams. Slate is designed for
-            freelancers who want a simple way to plan their schedule.
+            freelancers
           </h4>
-          <div class="testimonial-author">
-            <img
-              src="./assets/Ellipse 2avatar.png"
-              alt="John Doe"
-              class="author-photo"
-            />
-            <div>
-              <h6 class="author-name">John Doe</h6>
-              <p class="author-title">UI Designer</p>
+        </div>
+        <div class="items">
+          <div class="row" style="align-items: flex-end">
+            <div class="flex-column partner">
+              <h6>Client Name</h6>
+              <img src="assets/logos_google.png" alt="google logo" />
+            </div>
+            <div class="flex-column partner">
+              <h6>Client Name</h6>
+              <img src="assets/amazon.png" alt="amazon logo" />
+            </div>
+            <div class="flex-column partner">
+              <h6>Client Name</h6>
+              <img src="assets/Rectanglemicrosoft.png" alt="microsoft logo" />
+            </div>
+            <div class="flex-column partner">
+              <h6>Client Name</h6>
+              <img src="assets/Rectangleuber.png" alt="uber logo" />
+            </div>
+          </div>
+          <div class="row" style="align-items: flex-start">
+            <div class="flex-column partner" style="padding: 40px">
+              <h6>Client Name</h6>
+              <img src="assets/Rectangledropbox.png" alt="dropbox logo" />
+            </div>
+            <div class="flex-column partner">
+              <h6>Client Name</h6>
+              <img src="assets/logos_google.png" alt="google logo" />
+            </div>
+            <div class="flex-column partner">
+              <h6>Client Name</h6>
+              <img src="./assets/Rectangleuber.png" alt="google logo" />
+            </div>
+            <div class="flex-column partner">
+              <h6>Client Name</h6>
+              <img src="./assets/amazon.png" alt="google logo" />
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img
-            src="./assets/logos_google.png"
-            alt="Google"
-            class="company-logo"
-          />
-          <h4 class="testimonial-text">
-            Slate makes managing your freelance work a breeze. Intuitive and
-            efficient, it's a must-have tool for independent professionals.
-          </h4>
-          <div class="testimonial-author">
-            <img
-              src="./assets/Ellipse 2avatar.png"
-              alt="Jane Smith"
-              class="author-photo"
-            />
-            <div>
-              <h6 class="author-name">Jane Smith</h6>
-              <p class="author-title">Product Manager</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/amazon.png" alt="Amazon" class="company-logo" />
-          <h4 class="testimonial-text">
-            With Slate, I finally have a clear way to organize my daily
-            workflow. It's been a game-changer for my productivity.
-          </h4>
-          <div class="testimonial-author">
-            <img
-              src="./assets/Ellipse 2avatar.png"
-              alt="Alice Johnson"
-              class="author-photo"
-            />
-            <div>
-              <h6 class="author-name">Alice Johnson</h6>
-              <p class="author-title">UX Designer</p>
-            </div>
-          </div>
-        </div>
+        <button class="hero-cta">Try For Free</button>
       </div>
-      <div class="carousel-dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
+    </section>
+    <section id="testimonials" class="testimonials">
+      <div class="content flex-column">
+        <h2>Testimonials</h2>
+        <div class="testimonial-items">
+          <div class="carousel-container">
+            <div class="carousel-inner">
+              <div class="flex-column testimonial" data-index="0">
+                <img src="assets/logos_ibm.png" />
+                <h4>
+                  Most calendars are designed for teams. Slate is designed for
+                  freelancers who want a simple way to plan their schedule.
+                </h4>
+                <div class="client">
+                  <img
+                    src="assets/Ellipse 2avatar.png"
+                    alt="avatar"
+                    class="avatar"
+                  />
+                  <div class="flex-column" style="align-items: flex-start">
+                    <h6>John Doe</h6>
+                    <p>Ui designer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-column testimonial" data-index="1">
+                <img src="assets/logos_ibm.png" />
+                <h4>
+                  Most calendars are designed for teams. Slate is designed for
+                  freelancers who want a simple way to plan their schedule.
+                </h4>
+                <div class="client">
+                  <img
+                    src="assets/Ellipse 2avatar.png"
+                    alt="avatar"
+                    class="avatar"
+                  />
+                  <div class="flex-column" style="align-items: flex-start">
+                    <h6>John Doe</h6>
+                    <p>Ui designer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-column testimonial" data-index="2">
+                <img src="assets/logos_ibm.png" />
+                <h4>
+                  Most calendars are designed for teams. Slate is designed for
+                  freelancers who want a simple way to plan their schedule.
+                </h4>
+                <div class="client">
+                  <img
+                    src="assets/Ellipse 2avatar.png"
+                    alt="avatar"
+                    class="avatar"
+                  />
+                  <div class="flex-column" style="align-items: flex-start">
+                    <h6>John Doe</h6>
+                    <p>Ui designer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="action-btn">
+          <button class="crousal-btn" data-dot="0"></button>
+          <button class="crousal-btn selected" data-dot="1"></button>
+          <button class="crousal-btn" data-dot="2"></button>
+        </div>
       </div>
     </section>
     <section class="pricing" id="pricing">
@@ -317,76 +350,78 @@
       </div>
     </section>
     <section class="contact" id="contact">
-      <div aria-label="contact heading" class="section-heading">
-        <h2 class="section-heading-title">Contact Us</h2>
-        <h4 class="section-heading-subtitle">
-          <p>Most calendars are designed for teams.</p>
-          <p>Slate is designed for freelancers</p>
-        </h4>
-      </div>
-      <div class="sign-up">
-        <div class="contact-container">
-          <form id="contactForm" class="contact-form">
-            <h3>Contact Us</h3>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              id="message"
-              name="message"
-              rows="10"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit" class="send-button">Send</button>
-          </form>
+      <div class="content">
+        <div aria-label="contact heading" class="section-heading">
+          <h2 class="section-heading-title">Contact Us</h2>
+          <h4 class="section-heading-subtitle">
+            <p>Most calendars are designed for teams.</p>
+            <p style="text-align: center">Slate is designed for freelancers</p>
+          </h4>
         </div>
-        <div class="map-container">
-          <div class="address">
-            <div>
-              <img src="./assets/bx_bx-map.png" />
-              <h6>
-                <p>6386 Spring St undefined Anchorage,</p>
-                <p>Georgia 12473 United States</p>
-              </h6>
-            </div>
-            <div>
-              <img src="./assets/ic_baseline-phone-android.png" />
-              <h6>(843) 555-0130</h6>
-            </div>
-            <div>
-              <img src="./assets/ant-design_mail-outlined.png" />
-              <h6>willie.jennings@example.com</h6>
-            </div>
+        <div class="sign-up">
+          <div class="contact-container">
+            <form id="contactForm" class="contact-form">
+              <h3>Contact Us</h3>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                id="message"
+                name="message"
+                rows="10"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="send-button">Send</button>
+            </form>
           </div>
-          <div class="map-frame">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15283668.820206458!2d72.09954009527536!3d20.73601700500765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1745070601612!5m2!1sen!2sin"
-              width="516"
-              height="323"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="conatact-socials">
-            <ul class="socials">
-              <li><img src="./assets/ant-design_twitter-outlined.png" /></li>
-              <li><img src="./assets/ant-design_facebook-filled.png" /></li>
-              <li><img src="./assets/ant-design_linkedin-filled.png" /></li>
-            </ul>
+          <div class="map-container">
+            <div class="address">
+              <div>
+                <img src="./assets/bx_bx-map.png" />
+                <h6>
+                  <p>6386 Spring St undefined Anchorage,</p>
+                  <p>Georgia 12473 United States</p>
+                </h6>
+              </div>
+              <div>
+                <img src="./assets/ic_baseline-phone-android.png" />
+                <h6>(843) 555-0130</h6>
+              </div>
+              <div>
+                <img src="./assets/ant-design_mail-outlined.png" />
+                <h6>willie.jennings@example.com</h6>
+              </div>
+            </div>
+            <div class="map-frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15283668.820206458!2d72.09954009527536!3d20.73601700500765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1745070601612!5m2!1sen!2sin"
+                width="516"
+                height="323"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="conatact-socials">
+              <ul class="socials" style="display: flex">
+                <li><img src="./assets/ant-design_twitter-outlined.png" /></li>
+                <li><img src="./assets/ant-design_facebook-filled.png" /></li>
+                <li><img src="./assets/ant-design_linkedin-filled.png" /></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -399,51 +434,68 @@
       </div>
     </div>
     <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-column">
-          <h3>Pages</h3>
-          <ul>
-            <li>Home</li>
-            <li>Features</li>
-            <li>Partners</li>
-            <li>Pricing</li>
-            <li>Contact</li>
-          </ul>
+      <div class="footer-content">
+        <div class="footer-container">
+          <div class="footer-column" style="width: 170px">
+            <h3 class="footer-coloumn-title">Pages</h3>
+            <ul>
+              <li>Home</li>
+              <li>Features</li>
+              <li>Partners</li>
+              <li>Pricing</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="footer-column" style="width: 186px">
+            <h3>Tomothy</h3>
+            <ul>
+              <li>Eleanor Edwards</li>
+              <li>Ted Robertson</li>
+              <li>Annette Russell</li>
+              <li>Jennie McKinney</li>
+              <li>Gloria Richards</li>
+            </ul>
+          </div>
+          <div class="footer-column" style="width: 186px">
+            <h3>Jane Black</h3>
+            <ul>
+              <li>Philip Jones</li>
+              <li>Product</li>
+              <li>Colleen Russell</li>
+              <li>Marvin Hawkins</li>
+              <li>Bruce Simmons</li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-column">
-          <h3>Tomothy</h3>
-          <ul>
-            <li>Eleanor Edwards</li>
-            <li>Ted Robertson</li>
-            <li>Annette Russell</li>
-            <li>Jennie McKinney</li>
-            <li>Gloria Richards</li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Jane Black</h3>
-          <ul>
-            <li>Philip Jones</li>
-            <li>Product</li>
-            <li>Colleen Russell</li>
-            <li>Marvin Hawkins</li>
-            <li>Bruce Simmons</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-contact">
-        <p>
-          <img src="./assets/bx_bx-map (1).png" alt="location" /> 7480 Mistwood
-          Hollo
-        </p>
-        <p>
-          <img src="./assets/ic_baseline-phone-android (1).png" alt="phone" />
-          (239) 555-0108
-        </p>
-        <div class="social-icons">
-          <img src="./assets/twitter.png" alt="Twitter" />
-          <img src="./assets/fb.png" alt="Facebook" />
-          <img src="./assets/linkedin.png" alt="LinkedIn" />
+        <div class="footer-contact">
+          <p>
+            <img src="./assets/bx_bx-map (1).png" alt="location" /> 7480
+            Mistwood Hollo
+          </p>
+          <p>
+            <img src="./assets/ic_baseline-phone-android (1).png" alt="phone" />
+            (239) 555-0108
+          </p>
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="assets/ant-design_twitter-outlined (1).png"
+                alt="Twitter"
+                class="nav-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="assets/ant-design_facebook-filled (1).png"
+                alt="Facebook"
+                class="nav-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="assets/ant-design_linkedin-filled (1).png"
+                alt="LinkedIn"
+                class="nav-icon"
+            /></a>
+          </div>
         </div>
       </div>
     </footer>
